@@ -1,13 +1,28 @@
 import reflex as rx
 from PIL import Image
+from Santa_lucia.styles.style import Size
 import requests
 
 
 # region HEADER
 def home() -> rx.Component:
     return rx.vstack(
-        rx.box(
+        rx.flex(
+            rx.flex(
+                rx.heading('Unidad Educativa \nColegio \nSanta Lucia',
+                           white_space='pre-line', align='center', size='7'),
+                border='1px solid',
+                height='30em',
+                width='100%',
+                justify='center',
+                align='center',
+                margin_x=Size.VERY_BIG.value,
+
+            ),
             rx.image(src='img1.png'),
+            width='100%',
+            justify='center',
+            align='center',
         ),
 
         rx.heading('Quienes Somos', size='9', margin_y='0.8em'),
