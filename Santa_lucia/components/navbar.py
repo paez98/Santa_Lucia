@@ -1,5 +1,5 @@
 import reflex as rx
-from .link_button import link_button
+from .link_button import create_navigation_menu, create_menu_item_with_submenu
 from Santa_lucia.styles.style import Size
 
 
@@ -19,6 +19,12 @@ def navbar() -> rx.Component:
             border_radius="25%",
             align='start'
         ),
+        # create_menu_item_with_submenu('texto1', 'item1', 'item2', 'item3'),
+        rx.center(
+
+
+            create_navigation_menu(), width='100%'),
+
         rx.color_mode.button(position='absolute', right='0'),
         # justify='center',
         padding_y=Size.SMALL.value,
