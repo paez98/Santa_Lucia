@@ -1,5 +1,5 @@
 import reflex as rx
-from PIL import Image
+# from PIL import Image
 from Santa_lucia.styles.style import Size
 import requests
 
