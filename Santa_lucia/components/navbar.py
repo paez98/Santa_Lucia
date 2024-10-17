@@ -1,7 +1,7 @@
 import reflex as rx
 # from .link_button import create_navigation_menu, create_menu_item_with_submenu
 from Santa_lucia.styles.style import Size
-from .dropdown_menu import create_dropdown_button, create_nav_link, create_nav_dropdown, items, nav_dropdown
+from .dropdown_menu import nav_dropdown, nav_dropdown_2, create_nav_link
 
 
 def navbar_link(text: str, url: str) -> rx.Component:
@@ -22,11 +22,9 @@ def navbar() -> rx.Component:
         ),
         # create_menu_item_with_submenu('texto1', 'item1', 'item2', 'item3'),
         rx.center(
-            create_dropdown_button('Algo'),
+            create_nav_link("Inicio"),
             nav_dropdown,
-            create_nav_link('aldaasdkm'),
-            # create_navigation_menu(),
-
+            nav_dropdown_2,
             width='100%'),
 
         rx.color_mode.button(position='absolute', right='0'),
