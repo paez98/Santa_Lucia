@@ -1,6 +1,4 @@
 import reflex as rx
-# from st.triggers.cards import carta
-# from st.components.link_card import link_card
 
 from PIL import Image
 import requests
@@ -21,16 +19,9 @@ def body() -> rx.Component:
                 size='9',
                 weight='bold',
                 margin_bottom='1.5em',
-                # margin_top='1em',
-                # box_shadow="20px 20px 50px 15px rgba(0, 0, 0,0.1) inset",
-                # box_shadow= 'rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;',
-                # box-shadow:
                 color='#ffff',
-                # border_radius = '1em'
             ),
             rx.hstack(
-
-                # link_card(),
                 rx.flex(
                     rx.box(
                         rx.icon(

@@ -12,7 +12,7 @@ class ImageState(rx.State):
 
 def programs() -> rx.Component:
     return rx.vstack(
-        # region PROGRAMAS
+        # region MAS
         rx.flex(
 
             rx.heading(
@@ -146,16 +146,6 @@ def programs() -> rx.Component:
                     rx.image(src='img.jpg'),
                     width='35em',
                     # height='40em'
-                ),
-                rx.box(
-                    rx.avatar(
-                        rx.icon(tag="arrow_up"),
-                        on_click=rx.scroll_to(elem_id='evento1'),
-                    ),
-                    position="fixed",
-                    bottom="20px",
-                    right="20px",
-                    z_index="999",
                 ),
                 spacing='9'
             ),

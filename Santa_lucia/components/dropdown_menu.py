@@ -14,11 +14,11 @@ def create_icon(image: Optional[any] = None, ):
 # LINK DE NAVEGACION
 
 
-def create_nav_link(text):
+def create_nav_link(text, url: Optional[any] = None):
     """Create a navigation link with hover effects and styling."""
     return rx.el.a(
         text,
-        href="#",
+        href=url,
         transition_duration="300ms",
         font_weight="600",
         _hover={"color": "#10B981"},
@@ -37,7 +37,6 @@ def create_nav_link(text):
 def create_dropdown_button(text, icon: Optional[any] = None):
     """Create a dropdown button with hover effects and a chevron icon."""
     return rx.el.button(
-        create_icon(image=icon),
         text,
         rx.icon(
             tag='chevron-down',
@@ -71,7 +70,7 @@ def create_menu_item(text, hover_style, href):
 
 def create_dropdown_menu(items):
     """Create a dropdown menu with items and styling."""
-    hover_style = {"background-color": "#F3F4F6", "color": "#111827"}
+    hover_style = {"background-color": "#F3F4F6", "color": "#10B981"}
     return rx.box(
         *[create_menu_item(item['text'], hover_style, item['href'])
           for item in items],
@@ -105,10 +104,10 @@ def create_dropdown_container(items):
     )
 
 
-def create_nav_dropdown(button_text, items, icon):
+def create_nav_dropdown(button_text, items):
     """Create a navigation dropdown with button and menu items."""
     return rx.box(
-        create_dropdown_button(text=button_text, icon=icon),
+        create_dropdown_button(text=button_text),
         create_dropdown_container(items),
         class_name="group",
         position="relative",
@@ -127,7 +126,7 @@ items2 = [
 ]
 
 nav_dropdown = create_nav_dropdown(
-    button_text="Colegio", items=items, icon="icons/school-solid.svg")
+    button_text="Colegio", items=items)
 
 nav_dropdown_2 = create_nav_dropdown(
-    button_text="Servicios", items=items, icon="icons/school-solid.svg")
+    button_text="Servicios", items=items2)

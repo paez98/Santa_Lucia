@@ -20,24 +20,26 @@ def navbar() -> rx.Component:
             border_radius="25%",
             align='start'
         ),
-        # create_menu_item_with_submenu('texto1', 'item1', 'item2', 'item3'),
         rx.center(
-            create_nav_link("Inicio"),
+            create_nav_link("Inicio", '#'),
             nav_dropdown,
             nav_dropdown_2,
+            create_nav_link('Admisión', '#'),
+            create_nav_link('Contacto', '#'),
             width='100%'),
 
         rx.color_mode.button(position='absolute', right='0'),
-        # justify='center',
         padding_y=Size.SMALL.value,
         padding_x=Size.DEFAULT.value,
         align='center',
         width='100%',
         spacing=Size.DEFAULT.value,
+        bg='rgba(0,136,229, 0.7)',
         backdrop_filter='blur(5px)',
         transition_property="background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
         backdrop_blur="blur(1.5rem)",
         position="sticky",
         top="0",
-        z_index="50"
+        z_index="50",
+        margin=Size.ZERO.value
     )
